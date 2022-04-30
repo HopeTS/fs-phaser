@@ -1,0 +1,7 @@
+node_modules/
+public/dist/*.js
+public/dist/*.js.map
+src/**/*.js
+src/**/*.js.map
+*.log
+bundle.js
