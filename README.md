@@ -1,5 +1,3 @@
-# End to end typescript boilerplate
+## FS Phaser : Full Stack Phaser 3 Typescript boilerplate
 
-This repo allows you to get off the ground quickly if you're trying to create something using typescript on the client and the server. The typescript in src/client compiles in public/dist, and the typescript in src/server compiles in src/server.
-
-I made this while working on something else, and figured it might be useful for later :D
+FS Phaser is an extension of [ts commando](https://github.com/RobbyB97/ts-commando) that provides a phaser 3 boilerplate with a server for building API's and connecting to a database.
