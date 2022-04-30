@@ -1,10 +1,14 @@
 const path = require("path");
+const webpack = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "public/dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
+    filename: "app.js",
   },
   resolve: {
     roots: [path.resolve(__dirname, "src")],
@@ -27,6 +31,23 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: JSON.stringify(true),
+      WEBGL_RENDERER: JSON.stringify(true),
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src/@assets"),
+          to: path.resolve(__dirname, "build/@assets"),
+        },
+      ],
+    }),
+  ],
   /*   plugins: [
     new CopyPlugin({
       patterns: [

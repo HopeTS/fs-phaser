@@ -1,6 +1,5 @@
 node_modules/
-public/dist/*.js
-public/dist/*.js.map
+Client/build
 src/**/*.js
 src/**/*.js.map
 *.log

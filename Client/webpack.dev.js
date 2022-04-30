@@ -11,6 +11,7 @@ module.exports = {
       { test: /\.js$/, loader: "source-map-loader", enforce: "pre" },
     ],
   },
+  plugins: [...webpackCommon.plugins],
   watch: true,
   watchOptions: {
     aggregateTimeout: 600,
