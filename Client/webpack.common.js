@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlPlugin = require("html-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -47,6 +48,7 @@ module.exports = {
         },
       ],
     }),
+    new CleanWebpackPlugin(),
   ],
   /*   plugins: [
     new CopyPlugin({
